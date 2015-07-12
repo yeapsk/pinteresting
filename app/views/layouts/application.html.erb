@@ -4,13 +4,14 @@
   <title>Pinteresting</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+   <meta name="viewport" content='width=device-width, initial-scale=1.0'>
 </head>
 <body>
 	
-	<%= link_to "Home!", root_path %> # creates go to home navigation bar
-	<%= link_to "about!", about_path %>
-	<%= yield %>
+	<%= render 'layouts/header' %> <!-- call a partial from header file--> 
+	<div class="container"> <!-- div is used to group block-elements to format them with CSS, container is CSS, used to wrap site contents for responsive fixed width-->
+	<%= yield %> 
+	</div>
 
 </body>
 </html>
